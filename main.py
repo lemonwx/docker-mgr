@@ -1,5 +1,8 @@
 import sh
-cmd = "images"
-ret = sh.docker()
-print(ret.__str__())
 
+
+def which(cmd):
+    ret = sh.docker("help")
+    print(ret)
+
+which("images")
